@@ -7,13 +7,13 @@ var Stack = function() {
 };
 
 var stackMethods = {
-  storage : {},
+  storage: {},
   length: 0,
-  push : function(value) {
+  push: function(value) {
     this.storage[this.length] = value;
     this.length++;
   },
-  pop : function () {
+  pop: function () {
     if (this.length>0) {
       this.length--;
       var result = this.storage[this.length];
