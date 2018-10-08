@@ -17,7 +17,6 @@ var stackMethods = {
     if (this.length>0) {
       this.length--;
       var result = this.storage[this.length];
-      this.storage[this.length] = undefined;
       return result;
     }
   },

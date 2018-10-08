@@ -20,7 +20,6 @@ var queueMethods = {
         this.storage[i-1] = this.storage[i];
       }
       this.length--;
-      this.storage[this.length] = undefined;
       return result;
     } else {
       return undefined;

@@ -24,7 +24,6 @@ var Queue = function() {
       }
       //reduce length and set the last value to undefined
       length--;
-      storage[length] = undefined;
       return result;
     } else {
       return undefined;
