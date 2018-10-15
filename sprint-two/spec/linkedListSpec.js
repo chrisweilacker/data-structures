@@ -16,6 +16,10 @@ describe('linkedList', function() {
     expect(linkedList.contains).to.be.a('function');
   });
 
+  it('should return null when removeHead is called on empty linked list', function() {
+    expect(linkedList.removeHead()).to.equal(null);
+  });
+
   it('should designate a new tail when new nodes are added', function() {
     linkedList.addToTail(4);
     expect(linkedList.tail.value).to.equal(4);

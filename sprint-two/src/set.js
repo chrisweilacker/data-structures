@@ -1,7 +1,7 @@
 var Set = function() {
-  var set = Object.create(setPrototype);
-  set._storage = []; // fix me
-  return set;
+  var _set = Object.create(setPrototype);
+  _set._storage = []; // fix me
+  return _set;
 };
 
 var setPrototype = {};
