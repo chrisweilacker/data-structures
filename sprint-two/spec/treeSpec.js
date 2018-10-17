@@ -49,4 +49,23 @@ describe('tree', function() {
     tree.removeChildrenbyValue(7);
     expect(tree.contains(7)).to.equal(false);
   });
+
+  it('should have a parent property pointed to the parent tree', function() {
+    tree.addChild(5);
+    tree.addChild(6);
+    tree.children[0].addChild(7);
+    tree.children[1].addChild(8);
+    expect(tree.children[0].children[0].parent).to.equal(tree.children[0]);
+  });
+
+  it('should remove a child from its parent', function() {
+    tree.addChild(5);
+    tree.addChild(6);
+    tree.children[0].addChild(7);
+    tree.children[1].addChild(8);
+    var childTree = tree.children[0];
+    childTree.removeFromParent();
+    expect(childTree.parent).to.equal(null);
+    expect(tree.contains(5)).to.equal(false);
+  });
 });
