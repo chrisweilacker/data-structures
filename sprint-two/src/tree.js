@@ -50,8 +50,18 @@ treeMethods.contains = function(target) {
   return false;
 };
 
+treeMethods.traverse = function(callBack) {
+  callBack(this.value);
+  for (let i = 0; i < this.children.length; i ++) {
+    this.children[i].traverse(callBack);
+  }
+  
+};
+
+
 // A .parent property, which refers to the parent node or null when there is no node
 // A .removeFromParent() method, which disassociates the tree with its parent (in both directions)
+// Implement a .traverse() method on your tree. Your .traverse() should accept a callback and execute it on every value contained in the tree
 
 
 
