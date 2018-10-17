@@ -1,28 +1,27 @@
 var Set = function() {
   var _set = Object.create(setPrototype);
-  _set._storage = []; // fix me
+  _set._storage = new HashTable();
+  
   return _set;
 };
 
 var setPrototype = {};
 
 setPrototype.add = function(item) {
-  if (!this.contains(item)) {
-    this._storage.push(item);
-  }
+  this._storage.insert(item, item);
 };
 
 setPrototype.contains = function(item) {
-  return _.contains(this._storage, item);
+  return Boolean(this._storage.retrieve(item));
 };
 
 setPrototype.remove = function(item) {
-  this._storage.splice(this._storage.indexOf(item), 1);
+  this._storage.remove(item);
 };
 
 /*
  * Complexity: What is the time complexity of the above functions?
- * add is O(n)
- * contains is O(n)
- * remove is O(n)
+ * add is O(1)
+ * contains is O(1)
+ * remove is O(1)
  */
