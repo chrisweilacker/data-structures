@@ -55,7 +55,6 @@ treeMethods.traverse = function(callBack) {
   for (let i = 0; i < this.children.length; i ++) {
     this.children[i].traverse(callBack);
   }
-  
 };
 
 

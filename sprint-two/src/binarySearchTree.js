@@ -58,3 +58,10 @@ BinarySearchTree.prototype.depthFirstLog = function (callBack) {
  * contains: O(log n)
  * depthFirstLog: O(n)
  */
+
+
+//       5
+//    4     6
+//  3  6  2   8
+
+// .breadthFirstLog() method for binarySearchTee, logs the nodes contained in the tree using a breadth-first approach
